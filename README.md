@@ -550,7 +550,7 @@ body:has(.details-backdrop.open){overflow:hidden}
     catch(e){ alert("Impossible de sauvegarder. Vérifie que le stockage du navigateur est activé."); }
   }
   const nationalId = url => { const m = String(url).match(/pokemon-species\/(\d+)/); return m ? Number(m[1]) : 0; };
-  const imageUrl = id => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+  const imageUrl = id => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
   const escapeHtml = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const pretty = v => String(v || '').replace(/-/g,' ').replace(/\b\w/g, c => c.toUpperCase());
   const resourceFrCache = new Map();
